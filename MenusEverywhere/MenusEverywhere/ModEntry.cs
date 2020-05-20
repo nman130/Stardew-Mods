@@ -60,6 +60,10 @@ namespace MenusEverywhere
                     ag.showMonsterKillList();
                     return;
                 }
+                else if (this.Config.CanAccessBin && e.Button == this.Config.BinKey)
+                {
+                    Game1.getFarm().checkAction(new xTile.Dimensions.Location(71, 13), Game1.viewport, Game1.player);
+                }
             }
             if (this.Config.CanAccessBundles && Game1.activeClickableMenu is JunimoNoteMenu menu)
             {

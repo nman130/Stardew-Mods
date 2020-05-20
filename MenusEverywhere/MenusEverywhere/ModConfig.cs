@@ -30,7 +30,13 @@ namespace MenusEverywhere
         /// <summary>The button which opens the monster eradication goal menu.</summary>
         public SButton MonsterEradicationKey { get; set; } = SButton.F3;
 
+        /// <summary>The button which opens the shipping bin.</summary>
+        public SButton BinKey { get; set; } = SButton.F4;
+
         /// <summary>Whether the bundles can be accessed from outside the community center.</summary>
         public bool CanAccessBundles { get; set; } = true;
+
+        /// <summary>Whether the shipping bin can be accessed from outside the farm.</summary>
+        public bool CanAccessBin { get; set; } = false;
     }
 }
