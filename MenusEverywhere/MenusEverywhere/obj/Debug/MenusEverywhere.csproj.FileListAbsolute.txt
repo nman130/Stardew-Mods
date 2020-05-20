@@ -1,0 +1,6 @@
+C:\Users\nolan\source\repos\MenusEverywhere\MenusEverywhere\bin\Debug\MenusEverywhere.dll
+C:\Users\nolan\source\repos\MenusEverywhere\MenusEverywhere\bin\Debug\MenusEverywhere.pdb
+C:\Users\nolan\source\repos\MenusEverywhere\MenusEverywhere\obj\Debug\MenusEverywhere.csproj.CoreCompileInputs.cache
+C:\Users\nolan\source\repos\MenusEverywhere\MenusEverywhere\obj\Debug\MenusEverywhere.dll
+C:\Users\nolan\source\repos\MenusEverywhere\MenusEverywhere\obj\Debug\MenusEverywhere.pdb
+C:\Users\nolan\source\repos\MenusEverywhere\MenusEverywhere\obj\Debug\MenusEverywhere.csprojAssemblyReference.cache
