@@ -2,3 +2,6 @@
 **/packages
 *.sln
 *.config
+**/bin
+**/obj
+**/Properties
