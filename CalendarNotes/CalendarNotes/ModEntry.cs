@@ -58,7 +58,6 @@ namespace MenusEverywhere
                             this.Monitor.Log(Game1.year + " " + Game1.currentSeason + " " + day.myID.ToString(), LogLevel.Debug);
                         }
                     }
-
                 );
             }
         }
