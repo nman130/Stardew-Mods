@@ -1,4 +1,5 @@
 ﻿using System;
+using CalendarNotes;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
@@ -15,12 +16,8 @@ namespace MenusEverywhere
         /*********
         ** Properties
         *********/
-        /// <summary> The mod configuration from the player. </summary>
+        /// <summary>The mod configuration from the player.</summary>
         private ModConfig Config;
-
-        /// <summary> The dimensions of the menu. </summary>
-        int width;
-        int height;
 
         /*********
         ** Public methods
@@ -46,36 +43,22 @@ namespace MenusEverywhere
             if (!Context.IsWorldReady)
                 return;
 
-            if (Game1.player.canMove)
+            if(Game1.activeClickableMenu is Billboard b && b.calendarDays != null && e.Button == SButton.MouseLeft)
             {
-                if (e.Button == this.Config.CalendarKey)
-                {
-                    Game1.activeClickableMenu = new Billboard();
-                    return;
-                }
-                else if (e.Button == this.Config.RequestKey)
-                {
-                    Game1.activeClickableMenu = new Billboard(true);
-                    return;
-                }
-                else if (e.Button == this.Config.MonsterEradicationKey)
-                {
-                    AdventureGuild ag = new AdventureGuild();
-                    ag.showMonsterKillList();
-                    return;
-                }
-                else if (this.Config.CanAccessBin && e.Button == this.Config.BinKey)
-                {
-                    Game1.getFarm().checkAction(new xTile.Dimensions.Location(71, 13), Game1.viewport, Game1.player);
-                }
-            }
-            if (this.Config.CanAccessBundles && Game1.activeClickableMenu is JunimoNoteMenu menu)
-            {
-                menu.bundles.ForEach(
-                    delegate (Bundle bundle)
+
+                int x = Game1.getMouseX();
+                int y = Game1.getMouseY();
+                
+                b.calendarDays.ForEach(
+                    delegate (ClickableTextureComponent day)
                     {
-                        bundle.depositsAllowed = true;
+                        if(day.bounds.Contains(x, y))
+                        {
+                            Game1.activeClickableMenu = new NotesMenu(this.Monitor);
+                            this.Monitor.Log(Game1.year + " " + Game1.currentSeason + " " + day.myID.ToString(), LogLevel.Debug);
+                        }
                     }
+
                 );
             }
         }
