@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Xml;
+using System.Text.Json;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using StardewModdingAPI;
@@ -66,11 +67,25 @@ namespace CalendarNotes
             return output;
         }
 
-        /// <summary> This method constructs the portion of the note containing the rotating stock of the various stores. </summary>
+        /// <summary> This method constructs the portion of the note containing the various stores. </summary>
+        /// <param name="Month"> The Month. </param>
         /// <param name="Day"> The Day. </param>
-        /// <returns> The portion of the note containing the stock for a given day. </returns>
-        private String ConstructRotatingStock(int Day)
+        /// <returns> The portion of the note containing the various stores for a given day. </returns>
+        private String ConstructShopNote(int Month, int Day, )
         {
+            
+            String output = "";
+
+            Json
+
+            foreach ()
+            {
+
+            }
+
+
+
+
             return "";
         }
     }
