@@ -1,4 +1,4 @@
-﻿Menus Everywhere - 0.1.1
+﻿Menus Everywhere - 0.1.2
 
 This mod allows players to access various menus from anywhere in the game.
 

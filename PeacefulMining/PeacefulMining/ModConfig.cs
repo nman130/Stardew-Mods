@@ -7,7 +7,7 @@ using StardewValley;
 using StardewValley.Locations;
 using StardewValley.Menus;
 
-namespace MenusEverywhere
+namespace PeacefulMining
 {
     /// <summary>The configuration file creation for the mod.</summary>
     internal class ModConfig
@@ -18,9 +18,13 @@ namespace MenusEverywhere
         /// <summary>The default values.</summary>
         public static ModConfig Defaults { get; } = new ModConfig();
 
-        /****
-        ** Keyboard buttons
-        ****/
-        /// <summary>The button which opens the calendar.</summary>
+        /*********
+        ** Toggleables
+        *********/
+        /// <summary>Whether to stop the monster's movement or disable them entirely.</summary>
+        public bool StopMonsterMovement { get; set; } = true;
+
+        ///<summary>Whether the mod should be active at all.</summary>
+        public bool IsModActive { get; set; } = true;
     }
 }
