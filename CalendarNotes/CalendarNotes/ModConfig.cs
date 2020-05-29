@@ -23,6 +23,5 @@ namespace MenusEverywhere
         ****/
         /// <summary>The button which opens the calendar.</summary>
         public SButton CalendarKey { get; set; } = SButton.F1;
-
     }
 }
